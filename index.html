@@ -176,8 +176,8 @@ margin-top: 10px;
             <nav>
                 <ul>
                     <li><a href="info.html"> 🏡Animal Information</a></li>
-                    <li><a href="about.html"> ℹ️Animal Information</a></li>
-                    <li><a href="contact.html">📞 Animal Information</a></li>
+                    <li><a href="about.html"> ℹ️About Us</a></li>
+                    <li><a href="contact.html">📞Contact Us</a></li>
                 </ul>
                 <!-- Highlighted contents -->
                  <div class="highlight">
@@ -189,6 +189,26 @@ margin-top: 10px;
                 <div class="highlight blue">
                   📌Fun factP: A tigers roar can br heard up to 3 km away.
                 </div>
+                <div class="highlight red">
+                    📌Unlike lions, tigers, and leopards, cheetahs belong to the subfamily Felinae, meaning they lack the specialized throat
+                    anatomy needed to roar. 
+                </div>
+            <div class="highlight blue">
+                Elephants: "Hear" underground vibrations through their feet.
+            </div>
+            </div>
+            <div class="highlight ">
+                Giraffes: Sleep only 30 minutes a day.
+            </div>
+            <div class="highlight green ">
+                Hippos: Secrete pink "sweat" that acts as sunscreen.
+            </div>
+            <div class="highlight blue ">
+            Honey Badgers: Sleep off deadly venom and wake up fine.
+            </div>
+            <div class="highlight  ">
+            Zebras: Stripes confuse insects so they cannot land.
+            </div>
             </nav>
          </aside>
          <!-- Main content -->
@@ -205,6 +225,78 @@ margin-top: 10px;
         <br>
         <button onclick="lion();">Read More!</button>
         <p id="lion-info"></p>
+ 
+        <br><br><br>
+
+        <img src="cheeta.jpeg" width="300" height="200">
+        <br>
+        <button onclick="cheeta();">Read More!</button>
+        <p id="cheeta-info"></p>
+
+        <br><br><br>
+
+        <img src="elephant.jpeg" width="300" height="200">
+        <br>
+        <button onclick="elephant();">Read More!</button>
+        <p id="elephant-info"></p>
+
+        <br><br><br>
+
+        <img src="giraffe.jpeg" width="300" height="200">
+        <br>
+        <button onclick="giraffe();">Read More!</button>
+        <p id="giraffe-info"></p>
+
+        <br><br><br>
+
+        <img src="hippopotamus.jpeg" width="300" height="200">
+        <br>
+        <button onclick="hippopotamus();">Read More!</button>
+        <p id="hippotamus-info"></p>
+
+        <br><br><br>
+
+        <img src="honeybagger.jpeg" width="300" height="200">
+        <br>
+        <button onclick="honey badger();">Read More!</button>
+        <p id="honey badger-info"></p>
+
+        <br><br><br>
+
+        <img src="hyena.jpeg" width="300" height="200">
+        <br>
+        <button onclick="hyena();">Read More!</button>
+        <p id="hyena-info"></p>
+
+        <br><br><br>
+
+        <img src="rhino.jpeg" width="300" height="200">
+        <br>
+        <button onclick="rhino();">Read More!</button>
+        <p id="rhino-info"></p>
+
+        <br><br><br>
+       
+        <img src="snake.jpeg" width="300" height="200">
+        <br>
+        <button onclick="snake();">Read More!</button>
+        <p id="snake-info"></p>
+
+        <br><br><br>
+
+        <img src="zebra.jpeg" width="300" height="200">
+        <br>
+        <button onclick="zebra();">Read More!</button>
+        <p id="zebra-info"></p>
+
+        <br><br><br>
+
+        <img src="jackals.jpeg" width="300" height="200">
+        <br>
+        <button onclick="jackals();">Read More!</button>
+        <p id="jackals-info"></p>
+
+
           </main>
           <script>
             function tiger() {
@@ -213,6 +305,74 @@ margin-top: 10px;
                 para.innerHTML =
                 "🐯The tiger (Panthera tigris) is a large cat and a member of the genus Panthera native to Asia. It has a powerful, muscular body with a large head and paws, a long tail and orange fur with black, mostly vertical stripes. It is traditionally classified into nine recent subspecies, though some recognise only two subspecies, mainland Asian tigers and the island tigers of the Sunda Islands."
             }
+             function lion() {
+                    let para = document.getElementById("lion-info");
+                    para.style.display = "block";
+                    para.innerHTML =
+                    "🦁The lion (Panthera leo) is a large cat of the genus Panthera, currently ranging only in Sub-Saharan Africa and India. It has a muscular, broad-chested body; a short, rounded head; round ears; and a dark, hairy tuft at the tip of its tail. It is sexually dimorphic; adult male lions are larger than females and have a prominent mane that extends from the head to the shoulders and chest."
+             }
+             function cheeta() {
+                    let para = document.getElementById("cheeta-info");
+                    para.style.display = "block";
+                    para.innerHTML =
+                        "🐅The cheetah (Acinonyx jubatus) is a large feline native to Africa and central Iran. It is globally famous as the fastest land mammal, capable of reaching speeds up to 112 km/h (70 mph) in short bursts."
+                }
+                function elephant() {
+                        let para = document.getElementById("elephant-info");
+                        para.style.display = "block";
+                        para.innerHTML =
+                            "🐘Elephants are the largest living land mammals on Earth. Belonging to the family Elephantidae, these highly intelligent, self-aware creatures are famous for their prehensile trunks, ivory tusks, and complex social structures."
+                    }
+                     function giraffe() {
+                            let para = document.getElementById("giraffe-info");
+                            para.style.display = "block";
+                            para.innerHTML =
+                                "🦒The giraffe is the tallest living terrestrial animal and the largest ruminant on Earth. Reaching heights up to 5.7 metres (18.7 feet), these gentle giants are famous for their elongated necks, towering legs, and unique coat patterns.."
+                        }
+                         function hippopotamus() {
+                                let para = document.getElementById(" hippopotamus-info");
+                                para.style.display = "block";
+                                para.innerHTML =
+                                    "🦛The hippopotamus (Hippopotamus amphibius), meaning river horse in Ancient Greek, is the third-largest living land mammal after elephants and rhinoceroses. These highly territorial, semi-aquatic giants are native to sub-Saharan Africa and are widely feared as one of the continent's most dangerous animals due to their extreme aggression."
+                            }
+                             function honey badger() {
+                                    let para = document.getElementById("honey badger-info");
+                                    para.style.display = "block";
+                                    para.innerHTML =
+                                        "🦡The honey badger (Mellivora capensis), also known as the ratel, is widely recognized as the most fearless animal in the world. Despite its modest size, this member of the weasel family (Mustelidae) routinely drives off apex predators like lions and leopards through a mix of sheer aggression and nearly impenetrable physical defense."
+                                }
+                                 function hyena() {
+                                        let para = document.getElementById("hyena-info");
+                                        para.style.display = "block";
+                                        para.innerHTML =
+                                            "🦊Hyenas are unique, medium-to-large carnivoran mammals belonging to the family Hyaenidae. Despite their dog-like physical appearance and behavior, they are evolutionarily more closely related to felines and mongooses, placing them firmly in the suborder Feliformia."
+                                    }
+                                     function rhino() {
+                                            let para = document.getElementById("rhino-info");
+                                            para.style.display = "block";
+                                            para.innerHTML =
+                                                "🦏The rhinoceros (often shortened to rhino) is a massive, thick-skinned mammal belonging to the family Rhinocerotidae. As odd-toed ungulates, their closest living evolutionary relatives are horses and tapirs. They are characterized by their colossal size, prehistoric appearance, and keratin-composed horns."
+                                        }
+                                         function snake() {
+                                                let para = document.getElementById("snake-info");
+                                                para.style.display = "block";
+                                                para.innerHTML =
+                                                    "🐍Snakes are elongated, legless, carnivorous reptiles belonging to the suborder Serpentes. Found on every continent except Antarctica, they are evolutionary marvels characterized by their highly flexible skulls, unique sensory organs, and lack of external ears or eyelids."
+                                            }
+                                             function zebra() {
+                                                    let para = document.getElementById("zebra-info");
+                                                    para.style.display = "block";
+                                                    para.innerHTML =
+                                                        "🦓Zebras are single-hoofed African mammals belonging to the horse family (Equidae). Best known for their striking black-and-white striped coats, these highly social herbivores are native to the African savannas, grasslands, and mountainous regions."
+                                                }
+                                                  function jackals() {
+                                                        let para = document.getElementById("jackals-info");
+                                                        para.style.display = "block";
+                                                        para.innerHTML =
+                                                            "🐨Jackals are medium-sized, highly adaptable omnivorous canines native to Africa and Eurasia. While historically grouped together due to their similar physical builds, modern genetic analysis reveals that jackals are not a single closely related group (monophyletic), but rather a mix of distinct evolutionary lineages within the dog family (Canidae)."
+                                                    }
+                    
+                
           </script>
     </body>
 </html>
