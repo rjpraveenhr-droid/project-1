@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Landing page</title>
+        <style>
+         body {
+
+margin: 0;
+
+font-family: Arial, sans-serif;
+
+display: flex;
+
+}
+
+/* Sidebar */
+
+aside {
+
+width: 220px;
+
+background-color: #f2f2f2;
+
+padding: 20px;
+
+height: 100vh;
+
+position: fixed;
+
+top: 0;
+
+left: 0;
+
+overflow-y: auto;
+
+}
+
+/* Navigation links at top */
+
+nav {
+
+margin-bottom: 30px;
+
+/* space between links and highlights */
+
+}
+
+nav ul {
+
+list-style-type: none;
+
+margin: 0;
+
+padding: 0;
+
+}
+
+nav li {
+
+margin: 12px 0;
+
+}
+
+nav li a {
+
+text-decoration: none;
+
+color: black;
+
+display: block;
+
+padding: 10px;
+
+border-radius: 5px;
+
+}
+nav li a:hover {
+
+background-color: rgb(219, 130, 130);
+
+color: white;
+
+}
+
+/* Highlight boxes in sidebar */
+
+.highlight {
+
+background: #fff3cd;
+
+color: #856404;
+
+padding: 12px;
+
+border-radius: 6px;
+
+margin-bottom: 15px;
+
+border-left: 5px solid #ffcc00;
+
+font-size: 14px;
+
+}
+
+.highlight.green {
+
+background: #d4edda;
+
+color: #155724;
+
+border-left: 5px solid #28a745;
+
+}
+
+.highlight.blue {
+
+background: #cce5ff;
+
+color: #004085;
+
+border-left: 5px solid #007bff;
+
+}
+
+/* Main content */
+
+main {
+
+margin-left: 250px;
+
+padding: 20px;
+
+text-align: center;
+
+}
+
+/* Paragraph styles */
+
+#tiger-info {
+
+display: none;
+
+background-color: #ffe6e6;
+
+color: #b30000;
+
+padding: 15px;
+
+border-radius: 8px;
+
+margin-top: 10px;
+
+}
+
+#lion-info {
+
+display: none;
+
+background-color: #e6ffe6;
+
+color: #006600;
+
+padding: 15px;
+
+border-radius: 8px;
+
+margin-top: 10px;
+
+}
+        </style>
+    </head>
+    <body>
+        <!-- Sidebar -->
+         <aside>
+            <!--Navigation at top -->
+            <nav>
+                <ul>
+                    <li><a href="info.html"> 🏡Animal Information</a></li>
+                    <li><a href="about.html"> ℹ️Animal Information</a></li>
+                    <li><a href="contact.html">📞 Animal Information</a></li>
+                </ul>
+                <!-- Highlighted contents -->
+                 <div class="highlight">
+                   🌄 Did you know? Tigers can swim very well!
+                 </div>
+                <div class="highlight green">
+                   ✅Lions live in groups called prides.
+                </div>
+                <div class="highlight blue">
+                  📌Fun factP: A tigers roar can br heard up to 3 km away.
+                </div>
+            </nav>
+         </aside>
+         <!-- Main content -->
+          <main>
+          <h2>Interresting Information</h2>
+          <img src="tiger.jpeg" width="300" height="200">
+          <br>
+          <button onclick="tiger();">Read More!</button>
+          <p id="tiger-info"></p>
+
+          <br><br><br>
+
+        <img src="lion.jpeg" width="300" height="200">
+        <br>
+        <button onclick="lion();">Read More!</button>
+        <p id="lion-info"></p>
+          </main>
+          <script>
+            function tiger() {
+                let para = document.getElementById("tiger-info");
+                para.style.display = "block";
+                para.innerHTML =
+                "🐯The tiger (Panthera tigris) is a large cat and a member of the genus Panthera native to Asia. It has a powerful, muscular body with a large head and paws, a long tail and orange fur with black, mostly vertical stripes. It is traditionally classified into nine recent subspecies, though some recognise only two subspecies, mainland Asian tigers and the island tigers of the Sunda Islands."
+            }
+          </script>
+    </body>
+</html>
