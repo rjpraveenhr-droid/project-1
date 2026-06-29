@@ -75,6 +75,20 @@
                 border-radius: 5px;
     
             }
+            table{
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: #f4c542;
+}
+
+th, td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
         </style>
     
     </head>
@@ -96,27 +110,35 @@
 
             <button onclick="prev()">⬅️</button>
             <button onclick="next()">➡️</button>
+            <br><br>
+
+            <button onclick="showinfo()">Show Animal Information</button>
           </div>
 
           <!-- Information Table -->
-        <h2>Animal Information</h2>
+        <div id="infoTable" style="display:none; margin-top:20px;"></div>
         
-        <table border="1" cellpadding="10">
-            <tr>
-                <th>Animal</th>
-                <th>Habitat</th>
-                <th>Diet</th>
-                <th>Lifespan</th>
-            </tr>
+            <h2>Animal Information</h2>
         
-            <tr>
-                <td id="animalName">Tiger</td>
-                <td id="habitat">Forest</td>
-                <td id="diet">Carnivore</td>
-                <td id="life">10-15 years</td>
-            </tr>
-        </table>
-
+            <table border="1" cellpadding="10" cellspacing="0" style="margin:auto;">
+                <tr>
+                    <th>Animal</th>
+                    <th>Habitat</th>
+                    <th>Diet</th>
+                    <th>Lifespan</th>
+                </tr>
+        
+                <tr>
+                    <td id="animalName"></td>
+                    <td id="habitat"></td>
+                    <td id="diet"></td>
+                    <td id="life"></td>
+                </tr>
+            </table>
+            <button onclick="prevInfo()">⬅️</button>
+            <button onclick="nextInfo()">⬅️</button>
+        
+    
           <script>
                let images = ["tiger.jpeg", "lion.jpeg", "cheeta.jpeg", "giraffe.jpeg", "hippopotamus.jpeg", "elephant.jpeg", "honeybagger.jpeg", "hyena.jpeg", "jackals.jpeg","rhino.jpeg", "zebra.jpeg", "rhino.jpeg", "snake.jpeg"];
                let info = [
@@ -196,7 +218,7 @@
                     i = 0;
                 }
                 document.getElementById("slide").src = images[i];
-                updateInfo();
+                updateTable();
                }
 
                function prev() {
@@ -205,22 +227,53 @@
                     i = images.length - 1;
                 }
                 document.getElementById("slide").src = images[i];
-                updateInfo();
+                updateTable();
                }
+               
+               let j = 0;
+               function nextInfo() {
 
-               function updateInfo() {
+                    j++;
 
-                    document.getElementById("animalName").innerHTML = info[i].name;
+                    if (j >= info.length) {
+                        j = 0;
+                    }
 
-                    document.getElementById("habitat").innerHTML = info[i].habitat;
-
-                    document.getElementById("diet").innerHTML = info[i].diet;
-
-                    document.getElementById("life").innerHTML = info[i].life;
-
+                    updateTable();
                 }
+
+                function prevInfo() {
+
+                    j--;
+
+                    if (j < 0) {
+                        j = info.length - 1;
+                    }
+
+                    updateTable();
+                }
+   
+
+        
+
+        function showInfo() {
+
+            document.getElementById("infoTable").style.display = "block";
+            updateTable();
+
+        }
+        function updateTable(){
+
+                document.getElementById("animalName").innerHTML = info[j].name;
+                document.getElementById("habitat").innerHTML = info[j].habitat;
+                document.getElementById("diet").innerHTML = info[j].diet;
+                document.getElementById("life").innerHTML = info[j].life;
+
+            }
+               
                /* Auto slide */
                setInterval(next, 3000);
+               updateTable();
           </script>
     </body>
 </html>
