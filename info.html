@@ -1,0 +1,124 @@
+<html>
+    <head>
+    
+        <title>Animal Information</title>
+    
+        <style>
+            body {
+    
+                font-family: Arial;
+    
+                margin: 0;
+    
+                text-align: center;
+    
+                background: #f4f4f4;
+    
+            }
+    
+            /* Top menu */
+    
+            nav {
+    
+                background: #333;
+    
+                padding: 10px;
+    
+            }
+    
+            nav a {
+    
+                color: white;
+    
+                margin: 15px;
+    
+                text-decoration: none;
+    
+            }
+    
+            nav a:hover {
+    
+                background: orange;
+    
+                padding: 5px;
+    
+                border-radius: 5px;
+    
+            }
+    
+            /* Slider */
+    
+            .slider {
+    
+                padding: 30px;
+    
+            }
+    
+            img {
+    
+                border-radius: 10px;
+    
+            }
+    
+            button {
+    
+                padding: 10px;
+    
+                margin: 5px;
+    
+                background: blue;
+    
+                color: white;
+    
+                border: none;
+    
+                border-radius: 5px;
+    
+            }
+        </style>
+    
+    </head>
+
+    <body>
+        <!-- Menu -->
+         <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">about</a>
+            <a href="contact.html">Contact</a>
+         </nav>
+
+         <h1>Animal Gallery</h1>
+
+         <!-- SLIDER -->
+          <div class="slider">
+            <img id="slide" src="tiger.jpeg" width="400" height="250">
+            <br><br>
+
+            <button onclick="prev()">⬅️</button>
+            <button onclick="next()">➡️</button>
+          </div>
+
+          <script>
+               let images = ["tiger.jpeg", "lion.jpeg", "cheeta.jpeg", "giraffe.jpeg", "hippopotamus.jpeg", "elephant.jpeg", "honeybagger.jpeg", "hyena.jpeg", "jackals.jpeg","rhino.jpeg", "zebra.jpeg", "rhino.jpeg", "snake.jpeg"];
+               let i = 0;
+
+               function next() {
+                i++;
+                if (i > 0) {
+                    i = 0;
+                }
+                document.getElementById("slide").src = images[i];
+               }
+
+               function prev() {
+                i--;
+                if (i < 0) {
+                    i = images.length - 1;
+                }
+                document.getElementById("slide").src = images[i];
+               }
+               /* Auto slide */
+               setInterval(next, 3000);
+          </script>
+    </body>
+</html>
