@@ -98,8 +98,96 @@
             <button onclick="next()">➡️</button>
           </div>
 
+          <!-- Information Table -->
+        <h2>Animal Information</h2>
+        
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>Animal</th>
+                <th>Habitat</th>
+                <th>Diet</th>
+                <th>Lifespan</th>
+            </tr>
+        
+            <tr>
+                <td id="animalName">Tiger</td>
+                <td id="habitat">Forest</td>
+                <td id="diet">Carnivore</td>
+                <td id="life">10-15 years</td>
+            </tr>
+        </table>
+
           <script>
                let images = ["tiger.jpeg", "lion.jpeg", "cheeta.jpeg", "giraffe.jpeg", "hippopotamus.jpeg", "elephant.jpeg", "honeybagger.jpeg", "hyena.jpeg", "jackals.jpeg","rhino.jpeg", "zebra.jpeg", "rhino.jpeg", "snake.jpeg"];
+               let info = [
+                    {
+                        name: "Tiger",
+                        habitat: "Forest",
+                        diet: "Carnivore",
+                        life: "10-15 years"
+                    },
+                    {
+                        name: "Lion",
+                        habitat: "Grassland",
+                        diet: "Carnivore",
+                        life: "10-14 years"
+                    },
+                    {
+                        name: "Cheetah",
+                        habitat: "Savanna",
+                        diet: "Carnivore",
+                        life: "10-12 years"
+                    },
+                    {
+                        name: "Giraffe",
+                        habitat: "Savanna",
+                        diet: "Herbivore",
+                        life: "20-25 years"
+                    },
+                    {
+                        name: "Hippopotamus",
+                        habitat: "Rivers",
+                        diet: "Herbivore",
+                        life: "40-50 years"
+                    },
+                    {
+                         name: "Elephant",
+                        habitat: "Forest & Grassland",
+                        diet: "Herbivore",
+                        life: "60-70 years"
+                       
+                    },
+                    {
+                        name: "Hyena",
+                        habitat: "Savanna",
+                        diet: "Carnivore",
+                        life: "20-25 years"
+                    },
+                    {
+                        name: "Jackal",
+                        habitat: "Desert & Grassland",
+                        diet: "Omnivore",
+                        life: "10-12 years"
+                    },
+                    {
+                        name: "Rhino",
+                        habitat: "Grassland",
+                        diet: "Herbivore",
+                        life: "35-50 years"
+                    },
+                    {
+                        name: "Zebra",
+                        habitat: "Savanna",
+                        diet: "Herbivore",
+                        life: "20-30 years"
+                    },
+                    {
+                        name: "Snake",
+                        habitat: "Forests & Deserts",
+                        diet: "Carnivore",
+                        life: "10-30 years"
+                    }
+                ];
                let i = 0;
 
                function next() {
@@ -108,6 +196,7 @@
                     i = 0;
                 }
                 document.getElementById("slide").src = images[i];
+                updateInfo();
                }
 
                function prev() {
@@ -116,7 +205,20 @@
                     i = images.length - 1;
                 }
                 document.getElementById("slide").src = images[i];
+                updateInfo();
                }
+
+               function updateInfo() {
+
+                    document.getElementById("animalName").innerHTML = info[i].name;
+
+                    document.getElementById("habitat").innerHTML = info[i].habitat;
+
+                    document.getElementById("diet").innerHTML = info[i].diet;
+
+                    document.getElementById("life").innerHTML = info[i].life;
+
+                }
                /* Auto slide */
                setInterval(next, 3000);
           </script>
