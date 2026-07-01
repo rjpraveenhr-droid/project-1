@@ -1,381 +1,396 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Landing page</title>
-        <style>
-         body {
 
-margin: 0;
+<head>
+    <title>Landing page</title>
+    <style>
+        body {
 
-font-family: Arial, sans-serif;
+            margin: 0;
 
-display: flex;
+            font-family: Arial, sans-serif;
 
-}
+            display: flex;
 
-/* Sidebar */
+        }
 
-aside {
+        /* Sidebar */
 
-width: 220px;
+        aside {
 
-background-color: #f2f2f2;
+            width: 220px;
 
-padding: 20px;
+            background-color: #f2f2f2;
 
-height: 100vh;
+            padding: 20px;
 
-position: fixed;
+            height: 100vh;
 
-top: 0;
+            position: fixed;
 
-left: 0;
+            top: 0;
 
-overflow-y: auto;
+            left: 0;
 
-}
+            overflow-y: auto;
 
-/* Navigation links at top */
+        }
 
-nav {
+        /* Navigation links at top */
 
-margin-bottom: 30px;
+        nav {
 
-/* space between links and highlights */
+            margin-bottom: 30px;
 
-}
+            /* space between links and highlights */
 
-nav ul {
+        }
 
-list-style-type: none;
+        nav ul {
 
-margin: 0;
+            list-style-type: none;
 
-padding: 0;
+            margin: 0;
 
-}
+            padding: 0;
 
-nav li {
+        }
 
-margin: 12px 0;
+        nav li {
 
-}
+            margin: 12px 0;
 
-nav li a {
+        }
 
-text-decoration: none;
+        nav li a {
 
-color: black;
+            text-decoration: none;
 
-display: block;
+            color: black;
 
-padding: 10px;
+            display: block;
 
-border-radius: 5px;
+            padding: 10px;
 
-}
-nav li a:hover {
+            border-radius: 5px;
 
-background-color: rgb(219, 130, 130);
+        }
 
-color: white;
+        nav li a:hover {
 
-}
+            background-color: rgb(219, 130, 130);
 
-/* Highlight boxes in sidebar */
+            color: white;
 
-.highlight {
+        }
 
-background: #fff3cd;
+        /* Highlight boxes in sidebar */
 
-color: #856404;
+        .highlight {
 
-padding: 12px;
+            background: #fff3cd;
 
-border-radius: 6px;
+            color: #856404;
 
-margin-bottom: 15px;
+            padding: 12px;
 
-border-left: 5px solid #ffcc00;
+            border-radius: 6px;
 
-font-size: 14px;
+            margin-bottom: 15px;
 
-}
+            border-left: 5px solid #ffcc00;
 
-.highlight.green {
+            font-size: 14px;
 
-background: #d4edda;
+        }
 
-color: #155724;
+        .highlight.green {
 
-border-left: 5px solid #28a745;
+            background: #d4edda;
 
-}
+            color: #155724;
 
-.highlight.blue {
+            border-left: 5px solid #28a745;
 
-background: #cce5ff;
+        }
 
-color: #004085;
+        .highlight.blue {
 
-border-left: 5px solid #007bff;
+            background: #cce5ff;
 
-}
+            color: #004085;
 
-/* Main content */
+            border-left: 5px solid #007bff;
 
-main {
+        }
 
-margin-left: 250px;
+        /* Main content */
 
-padding: 20px;
+        main {
 
-text-align: center;
+            margin-left: 250px;
 
-}
+            padding: 20px;
 
-/* Paragraph styles */
+            text-align: center;
 
-#tiger-info {
+        }
 
-display: none;
+        /* Paragraph styles */
 
-background-color: #ffe6e6;
+        #tiger-info {
 
-color: #b30000;
+            display: none;
 
-padding: 15px;
+            background-color: #ffe6e6;
 
-border-radius: 8px;
+            color: #b30000;
 
-margin-top: 10px;
+            padding: 15px;
 
-}
+            border-radius: 8px;
 
-#lion-info {
+            margin-top: 10px;
 
-display: none;
+        }
 
-background-color: #e6ffe6;
+        #lion-info {
 
-color: #006600;
+            display: none;
 
-padding: 15px;
+            background-color: #e6ffe6;
 
-border-radius: 8px;
+            color: #006600;
 
-margin-top: 10px;
+            padding: 15px;
 
-}
-#cheeta-info {
+            border-radius: 8px;
 
-display: none;
+            margin-top: 10px;
 
-background-color: #0e5680;
+        }
 
-color: #449fc9;
+        #cheeta-info {
 
-padding: 15px;
+            display: none;
 
-border-radius: 8px;
+            background-color: #0e5680;
 
-margin-top: 10px;
+            color: #449fc9;
 
-}
-#elephant-info {
+            padding: 15px;
 
-display: none;
+            border-radius: 8px;
 
-background-color: #8a2397;
+            margin-top: 10px;
 
-color: #ae7ddd;
+        }
 
-padding: 15px;
+        #elephant-info {
 
-border-radius: 8px;
+            display: none;
 
-margin-top: 10px;
+            background-color: #8a2397;
 
-}
-#giraffe-info {
+            color: #ae7ddd;
 
-display: none;
+            padding: 15px;
 
-background-color: #e0156a;
+            border-radius: 8px;
 
-color: #df78ac;
+            margin-top: 10px;
 
-padding: 15px;
+        }
 
-border-radius: 8px;
+        #giraffe-info {
 
-margin-top: 10px;
+            display: none;
 
-}
-#hippotamus-info {
+            background-color: #e0156a;
 
-display: none;
+            color: #df78ac;
 
-background-color: #6e44e2;
+            padding: 15px;
 
-color: #6243d4;
+            border-radius: 8px;
 
-padding: 15px;
+            margin-top: 10px;
 
-border-radius: 8px;
+        }
 
-margin-top: 10px;
+        #hippotamus-info {
 
-}
-#honeybadger-info {
+            display: none;
 
-display: none;
+            background-color: #6e44e2;
 
-background-color: #e44242;
+            color: #6243d4;
 
-color: #df5454;
+            padding: 15px;
 
-padding: 15px;
+            border-radius: 8px;
 
-border-radius: 8px;
+            margin-top: 10px;
 
-margin-top: 10px;
+        }
 
-}
-#hyena-info {
+        #honeybadger-info {
 
-display: none;
+            display: none;
 
-background-color: #116f86;
+            background-color: #e44242;
 
-color: #2ddbe7;
+            color: #df5454;
 
-padding: 15px;
+            padding: 15px;
 
-border-radius: 8px;
+            border-radius: 8px;
 
-margin-top: 10px;
+            margin-top: 10px;
 
-}
-#rhino-info {
+        }
 
-display: none;
+        #hyena-info {
 
-background-color: #5f8a2f;
+            display: none;
 
-color: #a8da6f;
+            background-color: #116f86;
 
-padding: 15px;
+            color: #2ddbe7;
 
-border-radius: 8px;
+            padding: 15px;
 
-margin-top: 10px;
+            border-radius: 8px;
 
-}
-#snake-info {
+            margin-top: 10px;
 
-display: none;
+        }
 
-background-color: #694c3b;
+        #rhino-info {
 
-color: #e46a4b;
+            display: none;
 
-padding: 15px;
+            background-color: #5f8a2f;
 
-border-radius: 8px;
+            color: #a8da6f;
 
-margin-top: 10px;
+            padding: 15px;
 
-}
-#zebra-info {
+            border-radius: 8px;
 
-display: none;
+            margin-top: 10px;
 
-background-color: #ab65cc;
+        }
 
-color: #581255;
+        #snake-info {
 
-padding: 15px;
+            display: none;
 
-border-radius: 8px;
+            background-color: #694c3b;
 
-margin-top: 10px;
+            color: #e46a4b;
 
-}
-#jackals-info {
+            padding: 15px;
 
-display: none;
+            border-radius: 8px;
 
-background-color: #9fd39f;
+            margin-top: 10px;
 
-color: #30965e;
+        }
 
-padding: 15px;
+        #zebra-info {
 
-border-radius: 8px;
+            display: none;
 
-margin-top: 10px;
+            background-color: #ab65cc;
 
-}
-        </style>
-    </head>
-    <body>
-        <!-- Sidebar -->
-         <aside>
-            <!--Navigation at top -->
-            <nav>
-                <ul>
-                    <li><a href="info.html"> 🏡Animal Information</a></li>
-                    <li><a href="about.html"> ℹ️About Us</a></li>
-                    <li><a href="contact.html">📞Contact Us</a></li>
-                </ul>
-                <!-- Highlighted contents -->
-                 <div class="highlight">
-                   🌄 Did you know? Tigers can swim very well!
-                 </div>
-                <div class="highlight green">
-                   ✅Lions live in groups called prides.
-                </div>
-                <div class="highlight blue">
-                  📌Fun factP: A tigers roar can br heard up to 3 km away.
-                </div>
-                <div class="highlight red">
-                    📌Unlike lions, tigers, and leopards, cheetahs belong to the subfamily Felinae, meaning they lack the specialized throat
-                    anatomy needed to roar. 
-                </div>
-            <div class="highlight blue">
-                Elephants: "Hear" underground vibrations through their feet.
-            </div>
-            </div>
-            <div class="highlight ">
-                Giraffes: Sleep only 30 minutes a day.
-            </div>
-            <div class="highlight green ">
-                Hippos: Secrete pink "sweat" that acts as sunscreen.
-            </div>
-            <div class="highlight blue ">
+            color: #581255;
+
+            padding: 15px;
+
+            border-radius: 8px;
+
+            margin-top: 10px;
+
+        }
+
+        #jackals-info {
+
+            display: none;
+
+            background-color: #9fd39f;
+
+            color: #30965e;
+
+            padding: 15px;
+
+            border-radius: 8px;
+
+            margin-top: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <aside>
+        <!--Navigation at top -->
+        <nav>
+            <ul>
+                <li><a href="info.html"> 🏡Animal Information</a></li>
+                <li><a href="About.html"> ℹ️About Us</a></li>
+                <li><a href="contact.html">📞Contact Us</a></li>
+            </ul>
+        </nav>
+        <!-- Highlighted contents -->
+        <div class="highlight">
+            🌄 Did you know? Tigers can swim very well!
+        </div>
+        <div class="highlight green">
+            ✅Lions live in groups called prides.
+        </div>
+        <div class="highlight blue">
+            📌Fun factP: A tigers roar can br heard up to 3 km away.
+        </div>
+        <div class="highlight red">
+            📌Unlike lions, tigers, and leopards, cheetahs belong to the subfamily Felinae, meaning they lack the
+            specialized throat
+            anatomy needed to roar.
+        </div>
+        <div class="highlight blue">
+            Elephants: "Hear" underground vibrations through their feet.
+        </div>
+        </div>
+        <div class="highlight ">
+            Giraffes: Sleep only 30 minutes a day.
+        </div>
+        <div class="highlight green ">
+            Hippos: Secrete pink "sweat" that acts as sunscreen.
+        </div>
+        <div class="highlight blue ">
             Honey Badgers: Sleep off deadly venom and wake up fine.
-            </div>
-            <div class="highlight  ">
+        </div>
+        <div class="highlight  ">
             Zebras: Stripes confuse insects so they cannot land.
-            </div>
-            </nav>
-         </aside>
-         <!-- Main content -->
-          <main>
-          <h2>Interresting Information</h2>
-          <img src="tiger.jpeg" width="300" height="200">
-          <br>
-          <button onclick="tiger();">Read More!</button>
-          <p id="tiger-info"></p>
+        </div>
+        </nav>
+    </aside>
+    <!-- Main content -->
+    <main>
+        <h2>Interresting Information</h2>
+        <img src="tiger.jpeg" width="300" height="200">
+        <br>
+        <button onclick="tiger();">Read More!</button>
+        <p id="tiger-info"></p>
 
-          <br><br><br>
+        <br><br><br>
 
         <img src="lion.jpeg" width="300" height="200">
         <br>
         <button onclick="lion();">Read More!</button>
         <p id="lion-info"></p>
- 
+
         <br><br><br>
 
         <img src="cheeta.jpeg" width="300" height="200">
@@ -426,7 +441,7 @@ margin-top: 10px;
         <p id="rhino-info"></p>
 
         <br><br><br>
-       
+
         <img src="snake.jpeg" width="300" height="200">
         <br>
         <button onclick="snake();">Read More!</button>
@@ -447,82 +462,83 @@ margin-top: 10px;
         <p id="jackals-info"></p>
 
 
-          </main>
-          <script>
-            function tiger() {
-                let para = document.getElementById("tiger-info");
-                para.style.display = "block";
-                para.innerHTML =
+    </main>
+    <script>
+        function tiger() {
+            let para = document.getElementById("tiger-info");
+            para.style.display = "block";
+            para.innerHTML =
                 "🐯The tiger (Panthera tigris) is a large cat and a member of the genus Panthera native to Asia. It has a powerful, muscular body with a large head and paws, a long tail and orange fur with black, mostly vertical stripes. It is traditionally classified into nine recent subspecies, though some recognise only two subspecies, mainland Asian tigers and the island tigers of the Sunda Islands."
-            }
-             function lion() {
-                    let para = document.getElementById("lion-info");
-                    para.style.display = "block";
-                    para.innerHTML =
-                    "🦁The lion (Panthera leo) is a large cat of the genus Panthera, currently ranging only in Sub-Saharan Africa and India. It has a muscular, broad-chested body; a short, rounded head; round ears; and a dark, hairy tuft at the tip of its tail. It is sexually dimorphic; adult male lions are larger than females and have a prominent mane that extends from the head to the shoulders and chest."
-             }
-             function cheeta() {
-                    let para = document.getElementById("cheeta-info");
-                    para.style.display = "block";
-                    para.innerHTML =
-                        "🐅The cheetah (Acinonyx jubatus) is a large feline native to Africa and central Iran. It is globally famous as the fastest land mammal, capable of reaching speeds up to 112 km/h (70 mph) in short bursts."
-                }
-                function elephant() {
-                        let para = document.getElementById("elephant-info");
-                        para.style.display = "block";
-                        para.innerHTML =
-                            "🐘Elephants are the largest living land mammals on Earth. Belonging to the family Elephantidae, these highly intelligent, self-aware creatures are famous for their prehensile trunks, ivory tusks, and complex social structures."
-                    }
-                     function giraffe() {
-                            let para = document.getElementById("giraffe-info");
-                            para.style.display = "block";
-                            para.innerHTML =
-                                "🦒The giraffe is the tallest living terrestrial animal and the largest ruminant on Earth. Reaching heights up to 5.7 metres (18.7 feet), these gentle giants are famous for their elongated necks, towering legs, and unique coat patterns.."
-                        }
-                         function hippopotamus() {
-                                let para = document.getElementById(" hippopotamus-info");
-                                para.style.display = "block";
-                                para.innerHTML =
-                                    "🦛The hippopotamus (Hippopotamus amphibius), meaning river horse in Ancient Greek, is the third-largest living land mammal after elephants and rhinoceroses. These highly territorial, semi-aquatic giants are native to sub-Saharan Africa and are widely feared as one of the continent's most dangerous animals due to their extreme aggression."
-                            }
-                             function honeybadger() {
-                                    let para = document.getElementById("honey badger-info");
-                                    para.style.display = "block";
-                                    para.innerHTML =
-                                        "🦡The honey badger (Mellivora capensis), also known as the ratel, is widely recognized as the most fearless animal in the world. Despite its modest size, this member of the weasel family (Mustelidae) routinely drives off apex predators like lions and leopards through a mix of sheer aggression and nearly impenetrable physical defense."
-                                }
-                                 function hyena() {
-                                        let para = document.getElementById("hyena-info");
-                                        para.style.display = "block";
-                                        para.innerHTML =
-                                            "🦊Hyenas are unique, medium-to-large carnivoran mammals belonging to the family Hyaenidae. Despite their dog-like physical appearance and behavior, they are evolutionarily more closely related to felines and mongooses, placing them firmly in the suborder Feliformia."
-                                    }
-                                     function rhino() {
-                                            let para = document.getElementById("rhino-info");
-                                            para.style.display = "block";
-                                            para.innerHTML =
-                                                "🦏The rhinoceros (often shortened to rhino) is a massive, thick-skinned mammal belonging to the family Rhinocerotidae. As odd-toed ungulates, their closest living evolutionary relatives are horses and tapirs. They are characterized by their colossal size, prehistoric appearance, and keratin-composed horns."
-                                        }
-                                         function snake() {
-                                                let para = document.getElementById("snake-info");
-                                                para.style.display = "block";
-                                                para.innerHTML =
-                                                    "🐍Snakes are elongated, legless, carnivorous reptiles belonging to the suborder Serpentes. Found on every continent except Antarctica, they are evolutionary marvels characterized by their highly flexible skulls, unique sensory organs, and lack of external ears or eyelids."
-                                            }
-                                             function zebra() {
-                                                    let para = document.getElementById("zebra-info");
-                                                    para.style.display = "block";
-                                                    para.innerHTML =
-                                                        "🦓Zebras are single-hoofed African mammals belonging to the horse family (Equidae). Best known for their striking black-and-white striped coats, these highly social herbivores are native to the African savannas, grasslands, and mountainous regions."
-                                                }
-                                                  function jackals() {
-                                                        let para = document.getElementById("jackals-info");
-                                                        para.style.display = "block";
-                                                        para.innerHTML =
-                                                            "🐨Jackals are medium-sized, highly adaptable omnivorous canines native to Africa and Eurasia. While historically grouped together due to their similar physical builds, modern genetic analysis reveals that jackals are not a single closely related group (monophyletic), but rather a mix of distinct evolutionary lineages within the dog family (Canidae)."
-                                                    }
-                    
-                
-          </script>
-    </body>
+        }
+        function lion() {
+            let para = document.getElementById("lion-info");
+            para.style.display = "block";
+            para.innerHTML =
+                "🦁The lion (Panthera leo) is a large cat of the genus Panthera, currently ranging only in Sub-Saharan Africa and India. It has a muscular, broad-chested body; a short, rounded head; round ears; and a dark, hairy tuft at the tip of its tail. It is sexually dimorphic; adult male lions are larger than females and have a prominent mane that extends from the head to the shoulders and chest."
+        }
+        function cheeta() {
+            let para = document.getElementById("cheeta-info");
+            para.style.display = "block";
+            para.innerHTML =
+                "🐅The cheetah (Acinonyx jubatus) is a large feline native to Africa and central Iran. It is globally famous as the fastest land mammal, capable of reaching speeds up to 112 km/h (70 mph) in short bursts."
+        }
+        function elephant() {
+            let para = document.getElementById("elephant-info");
+            para.style.display = "block";
+            para.innerHTML =
+                "🐘Elephants are the largest living land mammals on Earth. Belonging to the family Elephantidae, these highly intelligent, self-aware creatures are famous for their prehensile trunks, ivory tusks, and complex social structures."
+        }
+        function giraffe() {
+            let para = document.getElementById("giraffe-info");
+            para.style.display = "block";
+            para.innerHTML =
+                "🦒The giraffe is the tallest living terrestrial animal and the largest ruminant on Earth. Reaching heights up to 5.7 metres (18.7 feet), these gentle giants are famous for their elongated necks, towering legs, and unique coat patterns.."
+        }
+        function hippopotamus() {
+            let para = document.getElementById(" hippopotamus-info");
+            para.style.display = "block";
+            para.innerHTML =
+                "🦛The hippopotamus (Hippopotamus amphibius), meaning river horse in Ancient Greek, is the third-largest living land mammal after elephants and rhinoceroses. These highly territorial, semi-aquatic giants are native to sub-Saharan Africa and are widely feared as one of the continent's most dangerous animals due to their extreme aggression."
+        }
+        function honeybadger() {
+            let para = document.getElementById("honey badger-info");
+            para.style.display = "block";
+            para.innerHTML =
+                "🦡The honey badger (Mellivora capensis), also known as the ratel, is widely recognized as the most fearless animal in the world. Despite its modest size, this member of the weasel family (Mustelidae) routinely drives off apex predators like lions and leopards through a mix of sheer aggression and nearly impenetrable physical defense."
+        }
+        function hyena() {
+            let para = document.getElementById("hyena-info");
+            para.style.display = "block";
+            para.innerHTML =
+                "🦊Hyenas are unique, medium-to-large carnivoran mammals belonging to the family Hyaenidae. Despite their dog-like physical appearance and behavior, they are evolutionarily more closely related to felines and mongooses, placing them firmly in the suborder Feliformia."
+        }
+        function rhino() {
+            let para = document.getElementById("rhino-info");
+            para.style.display = "block";
+            para.innerHTML =
+                "🦏The rhinoceros (often shortened to rhino) is a massive, thick-skinned mammal belonging to the family Rhinocerotidae. As odd-toed ungulates, their closest living evolutionary relatives are horses and tapirs. They are characterized by their colossal size, prehistoric appearance, and keratin-composed horns."
+        }
+        function snake() {
+            let para = document.getElementById("snake-info");
+            para.style.display = "block";
+            para.innerHTML =
+                "🐍Snakes are elongated, legless, carnivorous reptiles belonging to the suborder Serpentes. Found on every continent except Antarctica, they are evolutionary marvels characterized by their highly flexible skulls, unique sensory organs, and lack of external ears or eyelids."
+        }
+        function zebra() {
+            let para = document.getElementById("zebra-info");
+            para.style.display = "block";
+            para.innerHTML =
+                "🦓Zebras are single-hoofed African mammals belonging to the horse family (Equidae). Best known for their striking black-and-white striped coats, these highly social herbivores are native to the African savannas, grasslands, and mountainous regions."
+        }
+        function jackals() {
+            let para = document.getElementById("jackals-info");
+            para.style.display = "block";
+            para.innerHTML =
+                "🐨Jackals are medium-sized, highly adaptable omnivorous canines native to Africa and Eurasia. While historically grouped together due to their similar physical builds, modern genetic analysis reveals that jackals are not a single closely related group (monophyletic), but rather a mix of distinct evolutionary lineages within the dog family (Canidae)."
+        }
+
+
+    </script>
+</body>
+
 </html>

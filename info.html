@@ -1,260 +1,263 @@
 <html>
-    <head>
-    
-        <title>Animal Information</title>
-    
-        <style>
-            body {
-    
-                font-family: Arial;
-    
-                margin: 0;
-    
-                text-align: center;
-    
-                background: #f4f4f4;
-    
+
+<head>
+
+    <title>Animal Information</title>
+
+    <style>
+        body {
+
+            font-family: Arial;
+
+            margin: 0;
+
+            text-align: center;
+
+            background: #f4f4f4;
+
+        }
+
+        /* Top menu */
+
+        nav {
+
+            background: #333;
+
+            padding: 10px;
+
+        }
+
+        nav a {
+
+            color: white;
+
+            margin: 15px;
+
+            text-decoration: none;
+
+        }
+
+        nav a:hover {
+
+            background: orange;
+
+            padding: 5px;
+
+            border-radius: 5px;
+
+        }
+
+        /* Slider */
+
+        .slider {
+
+            padding: 30px;
+
+        }
+
+        img {
+
+            border-radius: 10px;
+
+        }
+
+        button {
+
+            padding: 10px;
+
+            margin: 5px;
+
+            background: blue;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #f4c542;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="About.html">about</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>Animal Gallery</h1>
+
+    <!-- SLIDER -->
+    <div class="slider">
+        <img id="slide" src="tiger.jpeg" width="400" height="250">
+        <br><br>
+
+        <button onclick="prev()">⬅️</button>
+        <button onclick="next()">➡️</button>
+        <br><br>
+
+        <button onclick="showinfo()">Show Animal Information</button>
+    </div>
+
+    <!-- Information Table -->
+    <div id="infoTable" style="display:none; margin-top:20px;"></div>
+
+    <h2>Animal Information</h2>
+
+    <table border="1" cellpadding="10" cellspacing="0" style="margin:auto;">
+        <tr>
+            <th>Animal</th>
+            <th>Habitat</th>
+            <th>Diet</th>
+            <th>Lifespan</th>
+        </tr>
+
+        <tr>
+            <td id="animalName"></td>
+            <td id="habitat"></td>
+            <td id="diet"></td>
+            <td id="life"></td>
+        </tr>
+    </table>
+    <button onclick="prevInfo()">⬅️</button>
+    <button onclick="nextInfo()">⬅️</button>
+
+
+    <script>
+        let images = ["tiger.jpeg", "lion.jpeg", "cheeta.jpeg", "giraffe.jpeg", "hippopotamus.jpeg", "elephant.jpeg", "honeybagger.jpeg", "hyena.jpeg", "jackals.jpeg", "rhino.jpeg", "zebra.jpeg", "rhino.jpeg", "snake.jpeg"];
+        let info = [
+            {
+                name: "Tiger",
+                habitat: "Forest",
+                diet: "Carnivore",
+                life: "10-15 years"
+            },
+            {
+                name: "Lion",
+                habitat: "Grassland",
+                diet: "Carnivore",
+                life: "10-14 years"
+            },
+            {
+                name: "Cheetah",
+                habitat: "Savanna",
+                diet: "Carnivore",
+                life: "10-12 years"
+            },
+            {
+                name: "Giraffe",
+                habitat: "Savanna",
+                diet: "Herbivore",
+                life: "20-25 years"
+            },
+            {
+                name: "Hippopotamus",
+                habitat: "Rivers",
+                diet: "Herbivore",
+                life: "40-50 years"
+            },
+            {
+                name: "Elephant",
+                habitat: "Forest & Grassland",
+                diet: "Herbivore",
+                life: "60-70 years"
+
+            },
+            {
+                name: "Hyena",
+                habitat: "Savanna",
+                diet: "Carnivore",
+                life: "20-25 years"
+            },
+            {
+                name: "Jackal",
+                habitat: "Desert & Grassland",
+                diet: "Omnivore",
+                life: "10-12 years"
+            },
+            {
+                name: "Rhino",
+                habitat: "Grassland",
+                diet: "Herbivore",
+                life: "35-50 years"
+            },
+            {
+                name: "Zebra",
+                habitat: "Savanna",
+                diet: "Herbivore",
+                life: "20-30 years"
+            },
+            {
+                name: "Snake",
+                habitat: "Forests & Deserts",
+                diet: "Carnivore",
+                life: "10-30 years"
             }
-    
-            /* Top menu */
-    
-            nav {
-    
-                background: #333;
-    
-                padding: 10px;
-    
+        ];
+        let i = 0;
+
+        function next() {
+            i++;
+            if (i > 0) {
+                i = 0;
             }
-    
-            nav a {
-    
-                color: white;
-    
-                margin: 15px;
-    
-                text-decoration: none;
-    
+            document.getElementById("slide").src = images[i];
+            updateTable();
+        }
+
+        function prev() {
+            i--;
+            if (i < 0) {
+                i = images.length - 1;
             }
-    
-            nav a:hover {
-    
-                background: orange;
-    
-                padding: 5px;
-    
-                border-radius: 5px;
-    
+            document.getElementById("slide").src = images[i];
+            updateTable();
+        }
+
+        let j = 0;
+        function nextInfo() {
+
+            j++;
+
+            if (j >= info.length) {
+                j = 0;
             }
-    
-            /* Slider */
-    
-            .slider {
-    
-                padding: 30px;
-    
+
+            updateTable();
+        }
+
+        function prevInfo() {
+
+            j--;
+
+            if (j < 0) {
+                j = info.length - 1;
             }
-    
-            img {
-    
-                border-radius: 10px;
-    
-            }
-    
-            button {
-    
-                padding: 10px;
-    
-                margin: 5px;
-    
-                background: blue;
-    
-                color: white;
-    
-                border: none;
-    
-                border-radius: 5px;
-    
-            }
-            table{
-    margin: auto;
-    border-collapse: collapse;
-}
 
-th{
-    background-color: #f4c542;
-}
+            updateTable();
+        }
 
-th, td{
-    padding: 10px;
-    text-align: center;
-    border: 1px solid black;
-}
-        </style>
-    
-    </head>
 
-    <body>
-        <!-- Menu -->
-         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">about</a>
-            <a href="contact.html">Contact</a>
-         </nav>
 
-         <h1>Animal Gallery</h1>
-
-         <!-- SLIDER -->
-          <div class="slider">
-            <img id="slide" src="tiger.jpeg" width="400" height="250">
-            <br><br>
-
-            <button onclick="prev()">⬅️</button>
-            <button onclick="next()">➡️</button>
-            <br><br>
-
-            <button onclick="showinfo()">Show Animal Information</button>
-          </div>
-
-          <!-- Information Table -->
-        <div id="infoTable" style="display:none; margin-top:20px;"></div>
-        
-            <h2>Animal Information</h2>
-        
-            <table border="1" cellpadding="10" cellspacing="0" style="margin:auto;">
-                <tr>
-                    <th>Animal</th>
-                    <th>Habitat</th>
-                    <th>Diet</th>
-                    <th>Lifespan</th>
-                </tr>
-        
-                <tr>
-                    <td id="animalName"></td>
-                    <td id="habitat"></td>
-                    <td id="diet"></td>
-                    <td id="life"></td>
-                </tr>
-            </table>
-            <button onclick="prevInfo()">⬅️</button>
-            <button onclick="nextInfo()">⬅️</button>
-        
-    
-          <script>
-               let images = ["tiger.jpeg", "lion.jpeg", "cheeta.jpeg", "giraffe.jpeg", "hippopotamus.jpeg", "elephant.jpeg", "honeybagger.jpeg", "hyena.jpeg", "jackals.jpeg","rhino.jpeg", "zebra.jpeg", "rhino.jpeg", "snake.jpeg"];
-               let info = [
-                    {
-                        name: "Tiger",
-                        habitat: "Forest",
-                        diet: "Carnivore",
-                        life: "10-15 years"
-                    },
-                    {
-                        name: "Lion",
-                        habitat: "Grassland",
-                        diet: "Carnivore",
-                        life: "10-14 years"
-                    },
-                    {
-                        name: "Cheetah",
-                        habitat: "Savanna",
-                        diet: "Carnivore",
-                        life: "10-12 years"
-                    },
-                    {
-                        name: "Giraffe",
-                        habitat: "Savanna",
-                        diet: "Herbivore",
-                        life: "20-25 years"
-                    },
-                    {
-                        name: "Hippopotamus",
-                        habitat: "Rivers",
-                        diet: "Herbivore",
-                        life: "40-50 years"
-                    },
-                    {
-                         name: "Elephant",
-                        habitat: "Forest & Grassland",
-                        diet: "Herbivore",
-                        life: "60-70 years"
-                       
-                    },
-                    {
-                        name: "Hyena",
-                        habitat: "Savanna",
-                        diet: "Carnivore",
-                        life: "20-25 years"
-                    },
-                    {
-                        name: "Jackal",
-                        habitat: "Desert & Grassland",
-                        diet: "Omnivore",
-                        life: "10-12 years"
-                    },
-                    {
-                        name: "Rhino",
-                        habitat: "Grassland",
-                        diet: "Herbivore",
-                        life: "35-50 years"
-                    },
-                    {
-                        name: "Zebra",
-                        habitat: "Savanna",
-                        diet: "Herbivore",
-                        life: "20-30 years"
-                    },
-                    {
-                        name: "Snake",
-                        habitat: "Forests & Deserts",
-                        diet: "Carnivore",
-                        life: "10-30 years"
-                    }
-                ];
-               let i = 0;
-
-               function next() {
-                i++;
-                if (i > 0) {
-                    i = 0;
-                }
-                document.getElementById("slide").src = images[i];
-                updateTable();
-               }
-
-               function prev() {
-                i--;
-                if (i < 0) {
-                    i = images.length - 1;
-                }
-                document.getElementById("slide").src = images[i];
-                updateTable();
-               }
-               
-               let j = 0;
-               function nextInfo() {
-
-                    j++;
-
-                    if (j >= info.length) {
-                        j = 0;
-                    }
-
-                    updateTable();
-                }
-
-                function prevInfo() {
-
-                    j--;
-
-                    if (j < 0) {
-                        j = info.length - 1;
-                    }
-
-                    updateTable();
-                }
-   
-
-        
 
         function showInfo() {
 
@@ -262,18 +265,19 @@ th, td{
             updateTable();
 
         }
-        function updateTable(){
+        function updateTable() {
 
-                document.getElementById("animalName").innerHTML = info[j].name;
-                document.getElementById("habitat").innerHTML = info[j].habitat;
-                document.getElementById("diet").innerHTML = info[j].diet;
-                document.getElementById("life").innerHTML = info[j].life;
+            document.getElementById("animalName").innerHTML = info[j].name;
+            document.getElementById("habitat").innerHTML = info[j].habitat;
+            document.getElementById("diet").innerHTML = info[j].diet;
+            document.getElementById("life").innerHTML = info[j].life;
 
-            }
-               
-               /* Auto slide */
-               setInterval(next, 3000);
-               updateTable();
-          </script>
-    </body>
+        }
+
+        /* Auto slide */
+        setInterval(next, 3000);
+        updateTable();
+    </script>
+</body>
+
 </html>
