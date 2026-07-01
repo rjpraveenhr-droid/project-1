@@ -1,0 +1,225 @@
+<html>
+
+<head>
+
+    <title>About Us - Animal World</title>
+
+    <style>
+        body {
+
+            margin: 0;
+
+            font-family: Arial, sans-serif;
+
+            background-color: #5db5e9;
+
+        }
+
+        /* Navbar */
+
+        nav {
+
+            background-color: rgb(51, 129, 202);
+
+            padding: 15px;
+
+            text-align: center;
+
+        }
+
+        nav a {
+
+            color: white;
+
+            margin: 20px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+        }
+
+        nav a:hover {
+
+            color: rgb(8, 99, 160);
+
+        }
+
+        /* Hero Section */
+
+        .hero {
+
+            background: url('https://images.unsplash.com/photo-1501706362039-c6e13f1d1e8f');
+
+            background-size: cover;
+
+            background-position: center;
+
+            color: rgb(255, 255, 255);
+
+            padding: 100px 20px;
+
+            text-align: center;
+
+        }
+
+        .hero h1 {
+
+            font-size: 50px;
+
+        }
+
+        .hero p {
+
+            font-size: 20px;
+
+        }
+
+        /* Section */
+
+        .section {
+
+            padding: 40px;
+
+            text-align: center;
+
+        }
+
+        .card {
+
+            background: rgb(81, 150, 206);
+
+            width: 70%;
+
+            margin: 20px auto;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0px 0px 10px rgb(2, 62, 90);
+
+        }
+
+        /* Button */
+
+        button {
+
+            padding: 10px 20px;
+
+            background: rgb(11, 70, 109);
+
+            border: none;
+
+            color: white;
+
+            font-size: 16px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+        button:hover {
+
+            background: rgb(12, 61, 126);
+
+        }
+
+        /* Hidden content */
+
+        #more {
+
+            display: none;
+
+        }
+
+        /* Footer */
+
+        footer {
+
+            background: rgb(51, 129, 202);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 15px;
+
+            margin-top: 20px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="project 1/index.html">Home</a>
+        <a href="project 1/info.html">Info</a>
+        <a href="project 1/contact.html">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>About Animal World</h1>
+        <p>Explore the beauty of wildlife and nature</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="section"></div>
+    <div class="card">
+        <h2>Who We Are ⭐</h2>
+        <p>"We are a passionate collective of educators, storytellers, and nature enthusiasts dedicated to bringing the
+            wonders of
+            the animal kingdom to light. Driven by curiosity and a love for the natural world, we translate complex
+            wildlife science
+            into engaging, easy-to-understand stories. We believe that understanding is the first step toward
+            appreciation, and we
+            strive to turn everyday learners into lifelong advocates for the planet's creatures."</p>
+    </div>
+
+
+    <div class="card">
+        <h2>Our Misson ⭐</h2>
+        <p>"Our mission is to bridge the gap between humanity and the natural world by providing highly accessible,
+            scientifically
+            accurate, and engaging animal knowledge. We dedicate ourselves to inspiring curiosity and fostering lifelong
+            learning,
+            empowering individuals of all ages to become informed advocates and responsible stewards for creatures
+            across the
+            globe."</p>
+    </div>
+
+    <div class="card">
+        <h2>More About Us</h2>
+        <p id="text">We provide intrestig facts,images, and knowlegde about animals.
+            <span id="more"> Our platform is designed for beginners and school students to make learing enjoyable and
+                interactive.</span>
+        </p>
+
+        <button onclick="showmore()">Read More</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p> Copyright 2026 Animal Wordl | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function showMore() {
+            var moreText = document.getElementById("more");
+
+            if (moreText.style.display === "none") {
+                moreText.style.display = "inline";
+            } else {
+                moreText.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
